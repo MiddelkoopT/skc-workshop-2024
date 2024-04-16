@@ -1,0 +1,77 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# Lesson Prep
+
+## Setup
+
+Update Tools with "Tools -\> Update" (do not pin) - takes a long time - don't do in class
+
+To have output go in console set in the config for the Rmd file set "chunk output in console"
+
+To view Rmd rendered (click Knit to html) in seprate windows select settings of the Rmd file and select "Preview in Window"
+
+Install Packages
+
+```{r message=FALSE, warning=FALSE}
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+install.packages(c("tidyverse", "lubridate", "ratdat"))
+```
+
+## Load
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ratdat)
+```
+
+## Lessons Snippits
+
+```{r}
+install.packages("ggplot2")
+```
+
+```{r}
+library(ggplot2)
+library(ratdat)
+?complete_old
+```
+
+```{r}
+# View(complete_old)
+```
+
+```{r}
+str(complete_old)
+```
+
+```{r}
+ggplot(data = complete_old)
+```
+
+```{r}
+ggplot(data = complete_old, mapping = aes(x = weight, y = hindfoot_length))
+
+```
+
+```{r}
+ggplot(data = complete_old, mapping = aes(x = weight, y = hindfoot_length)) +
+  geom_point()
+```
+## Presentatin Style
+
+Top/bottom
+```{r}
+1+2
+3+4
+print('Hello World')
+
+```
+
+
+
+
+
