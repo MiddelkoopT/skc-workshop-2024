@@ -25,6 +25,19 @@ editor_options:
 ---
 ```
 
+## Git
+
+Setup Git
+
+```{bash}
+git config color.ui auto
+git config pull.ff only
+git config push.default simple
+
+#git config user.name "First Last"
+#git config user.email "first_last@example.edu"
+```
+
 Notes:
 
   * R Notebooks seem fragile and Caching output seems dangerous.  Use "Chunk Output Inline" for a more Notebook experence or use Juypter!
