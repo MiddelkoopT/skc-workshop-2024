@@ -1,19 +1,14 @@
 ---
+title: "Preparation"
 output: html_document
 editor_options: 
   chunk_output_type: console
 ---
-# Lesson Prep
+See [Setup.Rmd](Setup.Rmd) for setting up RStudio environment..
 
-## Setup
+# R Ecology
 
-Update Tools with "Tools -\> Update" (do not pin) - takes a long time - don't do in class
-
-To have output go in console set in the config for the Rmd file set "chunk output in console"
-
-To view Rmd rendered (click Knit to html) in seprate windows select settings of the Rmd file and select "Preview in Window"
-
-Install Packages
+## Install Packages
 
 ```{r message=FALSE, warning=FALSE}
 options(repos = list(CRAN="http://cran.rstudio.com/"))
@@ -61,17 +56,3 @@ ggplot(data = complete_old, mapping = aes(x = weight, y = hindfoot_length))
 ggplot(data = complete_old, mapping = aes(x = weight, y = hindfoot_length)) +
   geom_point()
 ```
-## Presentatin Style
-
-Top/bottom
-```{r}
-1+2
-3+4
-print('Hello World')
-
-```
-
-
-
-
-

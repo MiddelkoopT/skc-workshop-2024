@@ -1,0 +1,41 @@
+---
+title: "Setup"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+
+# Setup
+
+Update Tools with "Tools -> Update" (do not pin) - takes a long time - don't do in class.
+
+Use a "R Markdown" document (`output: html_document` in prolog).
+
+To have the output display in the console (not inline) set in the config for the Rmd file set "chunk output in console".
+
+To view Rmd rendered (click Knit to html) in separate windows select settings for the Rmd file (wheel) and select "Preview in Window"
+
+Prolog should look like this:
+```
+---
+title: "Setup"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+```
+
+Notes:
+
+  * R Notebooks seem fragile and Caching output seems dangerous.  Use "Chunk Output Inline" for a more Notebook experence or use Juypter!
+  * R Markdown is a bit different (lists for example) than other markdown.
+  * With Rmd files I am a fan of using the console (chunk output in console) and use cmd-enter to run each line (opt-enter for not advancing cursor) for development.
+
+# Test
+
+Top/bottom
+```{r}
+1+2
+3+4
+print('Hello World')
+```
