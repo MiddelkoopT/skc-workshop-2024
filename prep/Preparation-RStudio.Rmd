@@ -1,19 +1,13 @@
 ---
-title: "Lesson Preparation"
 output: html_document
 editor_options: 
   chunk_output_type: console
 ---
-See [Setup.Rmd](Setup.Rmd) for setting up RStudio environment..
-
 # R Ecology
 
 ## Install Packages
 
-```{r message=FALSE, warning=FALSE}
-options(repos = list(CRAN="http://cran.rstudio.com/"))
-install.packages(c("tidyverse", "lubridate", "ratdat"))
-```
+Run the (Setup.Rmd)[Setup.Rmd] RStudio notebook once.
 
 ## Load
 
