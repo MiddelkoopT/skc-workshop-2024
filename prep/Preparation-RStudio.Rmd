@@ -102,3 +102,32 @@ Write Data
 ```{r}
 write_csv(surveys, "data/cleaned/test.csv")
 ```
+
+## Databases
+
+Setup
+```{r}
+dir.create('data_raw', recursive = TRUE, showWarnings = FALSE)
+install.packages(c("dbplyr", "RSQLite"))
+library(dplyr)
+library(dbplyr)
+```
+
+Download and connect to database
+```{r}
+download.file(url = "https://ndownloader.figshare.com/files/2292171",
+              destfile = "data_raw/portal_mammals.sqlite", mode = "wb")
+mammals <- DBI::dbConnect(RSQLite::SQLite(), "data_raw/portal_mammals.sqlite")
+src_dbi(mammals)
+```
+
+Run Queries
+```{r}
+tbl(mammals, sql("SELECT year, species_id, plot_id FROM surveys"))
+
+surveys <- tbl(mammals, "surveys")
+surveys %>%
+    select(year, species_id, plot_id)
+
+head(surveys, n = 10)
+```

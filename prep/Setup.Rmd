@@ -21,3 +21,8 @@ Packages from Lesson 1
 ```{r message=FALSE, warning=FALSE}
 install.packages("ggplot2")
 ```
+
+Packages from Data Lesson
+```{r message=FALSE, warning=FALSE}
+install.packages(c("dbplyr", "RSQLite"))
+```
