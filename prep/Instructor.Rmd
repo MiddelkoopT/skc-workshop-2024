@@ -46,6 +46,7 @@ git config push.default simple
   * R Notebooks seem fragile and Caching output seems dangerous.  Use "Chunk Output Inline" for a more Notebook experence or use Juypter!
   * R Markdown is a bit different (lists for example) than other markdown.
   * With Rmd files I am a fan of using the console (chunk output in console) and use cmd-enter to run each line (opt-enter for not advancing cursor) for development.
+  * You can auto-install packages in a Rmd file.  Need to figure out proper pedegody for this.
 
 # Test
 

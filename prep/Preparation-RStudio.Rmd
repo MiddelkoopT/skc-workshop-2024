@@ -5,6 +5,8 @@ editor_options:
 ---
 # R Ecology
 
+Test the technology prep (not show notes)
+
 ## Install Packages
 
 Run the (Setup.Rmd)[Setup.Rmd] RStudio notebook once.
@@ -17,7 +19,7 @@ library(lubridate)
 library(ratdat)
 ```
 
-## Lessons Snippits
+## Plotting
 
 ```{r}
 #install.packages("ggplot2")
@@ -71,3 +73,32 @@ myplot +
 
 ```
 
+## Understanding Data
+
+```{r}
+class(complete_old)
+head(complete_old)
+
+# provide a summary
+summary(complete_old)
+```
+
+## Working with Data
+
+Download Data (once)
+```{r}
+dir.create('data/cleaned', recursive = TRUE)
+download.file('https://www.michaelc-m.com/Rewrite-R-ecology-lesson/data/cleaned/surveys_complete_77_89.csv', 'data/cleaned/surveys_complete_77_89.csv')
+```
+
+Load data
+```{r}
+surveys <- read_csv("data/cleaned/surveys_complete_77_89.csv")
+class(surveys)
+select(surveys, plot_id, species_id, hindfoot_length)
+```
+
+Write Data
+```{r}
+write_csv(surveys, "data/cleaned/test.csv")
+```
