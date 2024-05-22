@@ -1,0 +1,29 @@
+---
+title: "Show Notes"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+
+# Navigate R Studio and Setup Project
+
+  * Open RStudio
+  * Create a new "New Project" in `~/work`
+    * If you use Git (you should) use "New Project" -> "Version Control" -> "Git".
+    * "File" -> "New Project" -> "New Directory" -> "New Project" -> "work/skc-workshop". Projects and data must be saved in `~/work` otherwise they will be lost.  Use a good name such as "skc-workshop"
+  * Turn off saving `.RData` in workspace
+    * "Tools" -> "Global Options" -> "General" (already selected) -> "Basic" (already selected) -> Under "Workspace" turn off "Restore `.RData` …" and set "Save workspace to `.RData` …" to "Never"
+  * Create a new "R Markdown" File
+    * "File" -> "New File" -> "R Markdown" -> "Create Empty Document" (bottom left button).
+    * Save file (cmd-s for Mac, ctrl-s for Windows/Linux) and use a good name such as "R-Ecology-Workshop" (it will add the `.Rmd` extension)
+  * Write, Setup, and View RMarkdown
+    * Write title `# RStudio` 
+    * "Settings (gear)" -> "Preview in Viewer Pane"
+    * "Settings (gear)" -> "Chunk Output in Console"
+    * Save file
+    * Knit (Knit to HTML)
+    * Optionally set "Knit on Save" - (runs entire notebook)
+    
+Resources:
+
+  * https://datacarpentry.org/R-ecology-lesson-alternative/introduction-r-rstudio.html

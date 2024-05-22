@@ -1,5 +1,5 @@
 ---
-title: "Setup"
+title: "Instructor Notes"
 output: html_document
 editor_options:
   chunk_output_type: console
@@ -25,6 +25,9 @@ editor_options:
 ---
 ```
 
+Project should use a "R Project". Load by clicking on the `.RProj` file.
+
+
 ## Git
 
 Setup Git
@@ -38,7 +41,7 @@ git config push.default simple
 #git config user.email "first_last@example.edu"
 ```
 
-Notes:
+## Notes
 
   * R Notebooks seem fragile and Caching output seems dangerous.  Use "Chunk Output Inline" for a more Notebook experence or use Juypter!
   * R Markdown is a bit different (lists for example) than other markdown.
