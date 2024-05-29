@@ -143,7 +143,7 @@ git config --local --list
   * Verify Pull:
     * "Pull" again and it should say "Already up to date."
     
-## Lesson Notes
+## Carpentry Workshop Lesson Notes
 
   * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file with a `library(ratdat)`.
     * Note: The file must be saved before the option to install is shown.
@@ -155,7 +155,7 @@ git config --local --list
   * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
 
 
-## References and Resources
+## Technical Notes
 
 RStudio keyboard shortcuts:
 
@@ -180,8 +180,3 @@ Check the status of your project with the remote repository.  In a terminal run:
 git fetch
 git status
 ```
-
-Resources:
-
-  * Git book: https://git-scm.com/book/en
-  * https://datacarpentry.org/R-ecology-lesson-alternative/introduction-r-rstudio.html
