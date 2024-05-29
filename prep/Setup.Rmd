@@ -5,7 +5,7 @@ editor_options:
 ---
 # Setup RStudio
 
-Run this Notebook once in an environment to install packages.
+Run this R Markdown notebook once in an environment to install packages.  Watch the console output for messages as they are not shown in Viewer.
 
 Configure mirror
 ```{r message=FALSE, warning=FALSE}

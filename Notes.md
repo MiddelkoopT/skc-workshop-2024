@@ -129,7 +129,7 @@ git config --local --list
   * Shutdown Jupyter: "File" -> "Hub Control Panel" -> "Stop My Server"
   * Close all Jupyter and RStudio windows
 
-## Start Envrionment after setup
+## Start Envrionment after Setup
 
   * Navigate to https://ci.skc.edu/ and click "Login to OSG Jupyter Notebook"
   * Start Jupyter: Select "Data Science with RStudio" and click "Start"
@@ -142,6 +142,18 @@ git config --local --list
     * Watch for errors
   * Verify Pull:
     * "Pull" again and it should say "Already up to date."
+    
+## Lesson Notes
+
+  * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file with a `library(ratdat)`.
+    * Note: The file must be saved before the option to install is shown.
+    * Note: The R session must be restarted. Do this with
+      * "Session" -> "Restart R"
+  * Libraries can also be installed with a `Setup.Rmd` file.
+    * `Setup.Rmd` must be run once every time you start a new environment (start a Juypter Lab instance) (this can be different on other systems). 
+    * See [Setup.Rmd](prep/Setup.Rmd) for an example.
+  * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
+
 
 ## References and Resources
 
