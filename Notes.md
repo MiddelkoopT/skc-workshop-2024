@@ -2,34 +2,61 @@
 
 ## Setup Repository in Gitea
 
-* Navigate to Gitea https://gitea-i2-cere-cloud.nrp-nautilus.io/
-  * This is a teaching environment and will be destroyed.
+  * Navigate to Gitea:
+    * https://gitea-i2-cere-cloud.nrp-nautilus.io/
+    * This is a teaching environment and will be destroyed.
+  * Sign in:
+    * Click on Sign In
+    * Click on "Sign in with Google"
+      * Authorize Google Account
+  * Register New Account:
+    * Username: Enter username (your_name), which is the same as the first part of your your_name@skc.edu email address.
+    * Click on "Complete Account" (you may need to click on "Leave")
+  * Set a password:
+    * Click your avitar (colorful box in the top right) for a dropdown box
+    * Click "Settings" in the dropdown box
+    * Click on "Account" tab on the left
+      * **DO NOT USE YOUR SKC PASSWORD HERE!**
+      * Enter "New Password" and "Confirm New password"
+      * Click "Update Password"
+  * Create new repo:
+    * Click the"+" in the upper right and select "+ New Repository"
+    * Repository Name: skc-your_name
+    * Make repository private (Visiblity): check the checkbox
+    * Initialize Repository: check the checkbox
+    * Click "Create Repository"
+  * Navigate to your repo:
+    * Click the green teacup in the top right corner
+    * Click on your repository name in the list on the right under "Repositories"
+  * Copy your repository address to your clipboard:
+    * Navigate to your repository
+    * Select "HTTPS" (already selected)
+    * Click on the copy button (⧉) to the right of the repository address next to the "HTTPS" box (to the left of the 3 dots).
   
 ## Navigate R Studio and Setup Project
 
   * Open RStudio
   * Create a new "New Project" in `~/work` with "Git"
-    * Projects and data must be saved in `~/work` otherwise they will be lost.  
-    * Use a good name such as "$USER-workshop"
-    * If you use Git (you are) use "New Project" -> "Version Control" -> "Git"
-      * Repository URL: your "https" repository value
+    * Note: Projects and data must be saved in `~/work` otherwise they will be lost.  
+    * Select "Version Control" -> "Git"
+      * Repository URL: your "https" repository value (see instructions above)
       * Project directory name: leave blank
       * Create project as a subdirectory of: ~/work (click "Browse" to change)
       * Click "Create Project"
   * Turn off saving `.RData` in project (not workspace)
     * It is not good to save data, especially in git.
     * "Tools" -> "Project Options" 
-      * Under "Workspace" 
-        * Set "Restore .RData into workspace at startup" to "No"
-        * Set "Save workspace to .RData on exit" to "No"
-        * Set "Always save histroy" to "No"
-        * Click "Ok"
+    * Under "Workspace" 
+      * Set "Restore .RData into workspace at startup" to "No"
+      * Set "Save workspace to .RData on exit" to "No"
+      * Set "Always save histroy" to "No"
+      * Click "Ok"
   * Setup Git
     * This needs to be done only once when you create a "new project".
     * Click on the "Terminal"
       * Verify that you are in your project folder `~/work/...`
-      * Run (note the quotes!) the following in the terminal:
-```{bash eval=FALSE}
+      * Run (note the quotes and replace with your information) the following in the terminal:
+```
 git config credential.helper cache
 git config user.name "First Last"
 git config user.email "first_last@skc.edu"
@@ -37,42 +64,58 @@ git config --local --list
 ```
   * Create a new "R Markdown" file
     * "File" -> "New File" -> "R Markdown" -> Click "Create Empty Document" (bottom left button).
-    * Save file ("R-Ecology"): Click the "disk" or press `cmd-s` for Mac, `ctrl-s` for Windows/Linux.
+    * Save file ("R-Ecology"): 
+      * Click the "disk" or press `cmd-s` for Mac, `ctrl-s` for Windows/Linux.
       * Enter a good file name such as "R-Ecology" (it will add the `.Rmd` extension)
-  * Write, Setup, and View RMarkdown
+  * Write, Configure, and View RMarkdown
     * Write title `# RStudio Workshop` 
     * Write some text (your name)
     * Configure rendering
-      * "Settings (gear)" -> "Preview in Viewer Pane"
-      * "Settings (gear)" -> "Chunk Output in Console"
+      * "Settings (gear in file tab toolbar)" -> "Preview in Viewer Pane"
+      * "Settings (gear in file tab toolbar)" -> "Chunk Output in Console"
     * Save file
     * Knit (Knit to HTML)
-    * Optionally set "Knit on Save" - (runs entire notebook)
+      * Optionally set "Knit on Save" - (runs entire notebook)
     * Verify output
 
 ## Save your work (with Git)
 
-  * Access *Git menu* via "Tools" -> "Version Control"; or the "GIT" dropdown on the toolbar.
-  * Diff: Check what you have done with (under the Git Menu)
-    * "Diff ..." (you may need to click it twice?!)
-    * Ignore html files (optional):
-      * Right click `R-Ecology.html` and select ignore - change to `*.html`
-    * Add files:
-      * Verify changes
+  * **Make sure all files are saved!**
+    * Unsaved files will have a star at the end of the file name in the tab
+  * Access the  *Git menu*
+    * Use "Tools" -> "Version Control"; 
+    * or the "GIT" dropdown in the main RStudio toolbar.
+  * Select "Commit" in the *Git menu*: 
+    * **Verify the work you have done**
+      * Click the name of each file and see the changes
+    * Check for unwanted files (secrets)!
+      * Ignore html files (optional):
+        * Right click `R-Ecology.html` and select ignore
+          * (optionally) change to `*.html`
+        * Click "Save"
+    * Add files (stage):
       * Click the "Staged" box to add them
-    * Commit message
-      * Title (no period) and less than 50 characters
-      * Be descriptive on what you did - not "update"
-      * Should be "one" thing.
-      * Blank line then a description, wrapped at 72 characters (optional).
+        * Make sure a "check" not a square box
+    * Add a "Commit message":
+      * Note: Commits should be "one" thing.
+      * Title (no period)
+        * Be descriptive on what you did - not "update"
+        * less than 50 characters
+        * Example: "Create a new RStudio project"
+      * Blank line then a description, 
+        * wrap at 72 characters (optional).
       * Blank line followed by a list (optional)
-      * List starts with a '-' character (no space)
-    * Press "Commit" and "Close"
-    * Push
+        * List starts with a '-' character (no space)
+      * Press "Commit" and "Close"
+    * "Push" to repository (top right of Git window):
       * Enter the username and password for the Git repo (not your account)
-    * Pull:
-      * Make sure that you get "Already up to date."
-      * Should not ask for password again.
+      * Make sure there is not an error
+    * Verify push
+      * Click "Push" again and make sure it says "Everyting up-to-date"
+      * Close
+    * Verify commit:
+      * Click "Commit" under the *Git menu*
+      * There should be no files in the "Staged" list on the left.
 
 ## Visual Setup
 
@@ -96,18 +139,37 @@ git config --local --list
   * Open Project: "File" -> "Open Project" -> navigate to `work/project-name/project-name.Rproj` and click open
   * Git Pull: "Tools" -> "Version Control" -> "Pull Branches"
     * Enter git user and password
+    * Watch for errors
+  * Verify Pull:
+    * "Pull" again and it should say "Already up to date."
 
 ## References and Resources
 
+RStudio keyboard shortcuts:
+
+  * cmd-r/ctrl-r - Run a line and move to the next
+  * option-r/alt-r - Run a single line and stay on that line
+
+Git Configuration: 
+
 Configure username, email address, and enable password saving for your new project. Run in terminal once after the project has been created. Note the use of double quotes.
 
-```{bash eval=FALSE}
+```bash
 git config credential.helper cache
 git config user.name "First Last"
 git config user.email "first_last@skc.edu"
 git config --local --list
 ```
-    
+
+Git Status:
+
+Check the status of your project with the remote repository.  In a terminal run:
+```bash
+git fetch
+git status
+```
+
 Resources:
 
+  * Git book: https://git-scm.com/book/en
   * https://datacarpentry.org/R-ecology-lesson-alternative/introduction-r-rstudio.html
