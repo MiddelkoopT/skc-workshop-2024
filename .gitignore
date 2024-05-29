@@ -6,3 +6,4 @@
 Test.*
 data/
 data_raw/
+local.env
