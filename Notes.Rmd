@@ -47,8 +47,9 @@ git config --local --list
   * Write, Setup, and View RMarkdown
     * Write title `# RStudio Workshop` 
     * Write some text (your name)
-    * "Settings (gear)" -> "Preview in Viewer Pane"
-    * "Settings (gear)" -> "Chunk Output in Console"
+    * Configure rendering
+      * "Settings (gear)" -> "Preview in Viewer Pane"
+      * "Settings (gear)" -> "Chunk Output in Console"
     * Save file
     * Knit (Knit to HTML)
     * Optionally set "Knit on Save" - (runs entire notebook)
@@ -59,8 +60,8 @@ git config --local --list
   * Access *Git menu* via "Tools" -> "Version Control"; or the "GIT" dropdown on the toolbar.
   * Diff: Check what you have done with (under the Git Menu)
     * "Diff ..." (you may need to click it twice?!)
-    * Ignore html files:
-      * right click `R-Ecology.html` and select ignore - change to `*.html`
+    * Ignore html files (optional):
+      * Right click `R-Ecology.html` and select ignore - change to `*.html`
     * Add files:
       * Verify changes
       * Click the "Staged" box to add them
