@@ -32,7 +32,7 @@ Project should use a "R Project". Load by clicking on the `.RProj` file.
 
 Setup Git
 
-```{bash}
+```{bash eval=FALSE}
 git config color.ui auto
 git config pull.ff only
 git config push.default simple
