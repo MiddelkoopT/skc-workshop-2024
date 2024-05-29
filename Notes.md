@@ -112,7 +112,7 @@ git config --local --list
       * Make sure there is not an error
     * Verify push
       * Click "Push" again and make sure it says "Everyting up-to-date"
-      * Close
+      * Close git window
     * Verify commit:
       * Click "Commit" under the *Git menu*
       * There should be no files in the "Staged" list on the left.
