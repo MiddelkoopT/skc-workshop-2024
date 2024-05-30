@@ -174,7 +174,7 @@ git config --local --list
 ```
 *Please note we do not use `--global` since no global settings are saved in this Environment.
 
-For personal access token projects, configure a persistent git configuration.  Use this code in a Bash script or Bash notebook and run once after staring a new environment. Note the use of double quotes.
+For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook and run once after staring a new environment. Note the use of double quotes.
 ```bash
 #!/bin/bash
 ln -sfv ~/work/.gitconfig ~/
@@ -193,3 +193,14 @@ Check the status of your project with the remote repository.  In a terminal run:
 git fetch
 git status
 ```
+
+R Configuration:
+
+R packages must be installed every time the environment is started, to do this a `setup.R` script or a R Markdown document must be run with the following:
+
+```r
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+install.packages(c("tidyverse", "lubridate", "ratdat"))
+install.packages("ggplot2")
+```
+
