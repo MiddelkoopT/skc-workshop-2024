@@ -164,7 +164,7 @@ RStudio keyboard shortcuts:
 
 Git Configuration: 
 
-Configure username, email address, and enable password saving for your new project. Run in terminal once after the project has been created. Note the use of double quotes.
+For password based projects, configure username, email address, and enable password saving for your new project. Run in terminal once after the project has been created. Note the use of double quotes.
 
 ```bash
 git config credential.helper cache
@@ -173,6 +173,18 @@ git config user.email "first_last@skc.edu"
 git config --local --list
 ```
 *Please note we do not use `--global` since no global settings are saved in this Environment.
+
+For personal access token projects, configure a persistent git configuration.  Use this code in a Bash script or Bash notebook and run once after staring a new environment. Note the use of double quotes.
+```bash
+#!/bin/bash
+ln -sfv ~/work/.gitconfig ~/
+ln -sfv ~/work/.git-credentials ~/
+
+git config --global credential.helper store
+git config --global user.name "First Last"
+git config --global user.email "first_last@skc.edu"
+git config --global --list
+```
 
 Git Status:
 
