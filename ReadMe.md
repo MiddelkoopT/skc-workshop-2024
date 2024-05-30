@@ -19,6 +19,9 @@ Lessons (Day 2):
   * Welcome and overview
   * Sharing & collaborating with code (Github introduction)
     * https://swcarpentry.github.io/git-novice/01-basics.html
+    * https://swcarpentry.github.io/git-novice/04-changes.html
+    * https://swcarpentry.github.io/git-novice/05-history.html
+    * https://swcarpentry.github.io/git-novice/06-ignore.html
     * https://swcarpentry.github.io/git-novice/08-collab.html
     * https://swcarpentry.github.io/git-novice/09-conflict.html (optional)
     * https://swcarpentry.github.io/git-novice/10-open.html
@@ -30,12 +33,12 @@ Lessons (Day 2):
   * Login to the environment (SKC-CARE): https://ci.skc.edu/
   * Instructor Notes: [Notes.md](Notes.md)
   * R Markdown: https://bookdown.org/yihui/rmarkdown/markdown-syntax.html
-  * R Language: https://www.r-project.org/
-  * R project introduction http://cran.r-project.org/doc/manuals/R-intro.html
-  * R Tutorial: https://www.cyclismo.org/tutorial/R/
-
+  * Git and R (recommended): https://happygitwithr.com/
   * Git book: https://git-scm.com/book/en
   * Git branching: 
     * https://nvie.com/posts/a-successful-git-branching-model/
     * https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+  * R Tutorial: https://www.cyclismo.org/tutorial/R/
+  * R project introduction http://cran.r-project.org/doc/manuals/R-intro.html
+  * R Language: https://www.r-project.org/
   * Test Driven Development (TDD) http://www.agiledata.org/essays/tdd.html

@@ -172,6 +172,7 @@ git config user.name "First Last"
 git config user.email "first_last@skc.edu"
 git config --local --list
 ```
+*Please note we do not use `--global` since no global settings are saved in this Environment.
 
 Git Status:
 
