@@ -157,12 +157,12 @@ git config --local --list
 
 ## Technical Notes
 
-RStudio keyboard shortcuts:
+### RStudio keyboard shortcuts
 
   * cmd-r/ctrl-r - Run a line and move to the next
   * option-r/alt-r - Run a single line and stay on that line
 
-Git Configuration: 
+### Git Configuration
 
 For password based projects, configure username, email address, and enable password saving for your new project. Run in terminal once after the project has been created. Note the use of double quotes.
 
@@ -174,19 +174,24 @@ git config --local --list
 ```
 *Please note we do not use `--global` since no global settings are saved in this Environment.
 
-For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook and run once after staring a new environment. Note the use of double quotes.
+For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook that you must run once after logging in and launching a new envrionment.
 ```bash
 #!/bin/bash
 ln -sfv ~/work/.gitconfig ~/
 ln -sfv ~/work/.git-credentials ~/
 
 git config --global credential.helper store
-git config --global user.name "First Last"
-git config --global user.email "first_last@skc.edu"
 git config --global --list
 ```
 
-Git Status:
+You can also setup your `user.name` and `user.email` for every project (that is what `--global` does). This only needs to be once.  Replace the name and email  with your information and note the use of double quotes.  
+
+```bash
+git config --global user.name "First Last"
+git config --global user.email "first_last@skc.edu"
+```
+
+### Git Status
 
 Check the status of your project with the remote repository.  In a terminal run:
 ```bash
@@ -194,7 +199,7 @@ git fetch
 git status
 ```
 
-R Configuration:
+### R Configuration
 
 R packages must be installed every time the environment is started, to do this a `setup.R` script or a R Markdown document must be run with the following:
 
@@ -204,3 +209,7 @@ install.packages(c("tidyverse", "lubridate", "ratdat"))
 install.packages("ggplot2")
 ```
 
+If you want to run this script from your setup.sh you can add code:
+```bash
+Rscript setup.R
+```
