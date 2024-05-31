@@ -145,15 +145,16 @@ git config --local --list
     
 ## Carpentry Workshop Lesson Notes
 
-  * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file with a `library(ratdat)`.
+  * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file (for example: `library(ratdat)`).
     * Note: The file must be saved before the option to install is shown.
-    * Note: The R session must be restarted. Do this with
+    * Note: The R session may need to be restarted. Do this with
       * "Session" -> "Restart R"
-  * Libraries can also be installed with a `Setup.Rmd` file.
-    * `Setup.Rmd` must be run once every time you start a new environment (start a Juypter Lab instance) (this can be different on other systems). 
+    * Remember to "Open Project" for theproject when starting a new environment.
+  * Libraries can be installed with a `Setup.Rmd` file.
+    * `setup.Rmd` must be run once every time you start a new environment (start a Juypter Lab instance) (this can be different on other systems). 
     * See [Setup.Rmd](prep/Setup.Rmd) for an example.
   * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
-
+  * By default libraries are not saved when restarting the environment.
 
 ## Technical Notes
 
@@ -173,7 +174,7 @@ git config user.email "first_last@skc.edu"
 git config --local --list
 ```
 
-For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook that you must run once after logging in and launching a new envrionment.
+For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook that you must run once after logging in and launching a new environment.
 ```bash
 #!/bin/bash
 ln -sfv ~/work/.gitconfig ~/
