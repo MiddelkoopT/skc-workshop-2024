@@ -56,8 +56,8 @@
     * Click on the "Terminal"
       * Verify that you are in your project folder `~/work/...`
       * Run (note the quotes and replace with your information) the following in the terminal:
-```
-git config credential.helper cache
+```bash
+git config credential.helper store
 git config user.name "First Last"
 git config user.email "first_last@skc.edu"
 git config --local --list
@@ -172,7 +172,6 @@ git config user.name "First Last"
 git config user.email "first_last@skc.edu"
 git config --local --list
 ```
-*Please note we do not use `--global` since no global settings are saved in this Environment.
 
 For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook that you must run once after logging in and launching a new envrionment.
 ```bash
@@ -207,9 +206,4 @@ R packages must be installed every time the environment is started, to do this a
 options(repos = list(CRAN="http://cran.rstudio.com/"))
 install.packages(c("tidyverse", "lubridate", "ratdat"))
 install.packages("ggplot2")
-```
-
-If you want to run this script from your setup.sh you can add code:
-```bash
-Rscript setup.R
 ```
