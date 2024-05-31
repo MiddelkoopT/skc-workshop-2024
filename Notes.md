@@ -149,15 +149,7 @@ git config --local --list
     * Note: The file must be saved before the option to install is shown.
     * Note: The R session may need to be restarted. Do this with
       * "Session" -> "Restart R"
-  * Libraries can be installed with a `setup.R` file.
-    * `setup.R` must be run once every time you start a new environment (start a Juypter Lab instance) (this can be different on other systems). 
-    * See [Setup.R](prep/Setup.R) for an example.
   * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
-  * By default libraries are not saved when restarting the environment.  You can change the save path by creating a `.Renviron` file in the project directory (remember to Restart R) with the following contents:
-```bash
-R_LIBS_SITE=~/work/R
-```
-  * Remember to "Open Project" for the project when starting a new environment.
 
 ## Technical Notes
 
@@ -211,3 +203,12 @@ options(repos = list(CRAN="http://cran.rstudio.com/"))
 install.packages(c("tidyverse", "lubridate", "ratdat"))
 install.packages("ggplot2")
 ```
+
+R packages can be saved in a persistent `~/work` directory so they do not need to be reinstalled every time the environment is restarted.
+
+  * Create a `~/work/R` folder (run `mkdir ~/work/R` in a terminal)
+  * Create a `.Renviron` file in the project directory with the content below
+```bash
+R_LIBS_SITE=~/work/R
+```
+  * Remember to "Open Project" for the project when starting a new environment.
