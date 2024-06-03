@@ -212,3 +212,7 @@ R packages can be saved in a persistent `~/work` directory so they do not need t
 R_LIBS_SITE=~/work/R
 ```
   * Remember to "Open Project" for the project when starting a new environment.
+
+To display R Markdown files in Gitea, save the intermediate markdown file (`.md`), do the following:
+
+  * Go to the settings for the R Markdown file (the gear on the file toolbar) and selecting "Output Options" -> "Advanced" -> and select "Keep markdown source file".

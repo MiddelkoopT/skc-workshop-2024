@@ -18,6 +18,7 @@ Lessons (Day 2):
 
   * Welcome and overview
   * Sharing & collaborating with code (Github introduction)
+    * Introduction: https://happygitwithr.com/big-picture.html
     * https://swcarpentry.github.io/git-novice/01-basics.html
     * https://swcarpentry.github.io/git-novice/04-changes.html
     * https://swcarpentry.github.io/git-novice/05-history.html
@@ -32,13 +33,18 @@ Lessons (Day 2):
 
   * Login to the environment (SKC-CARE): https://ci.skc.edu/
   * Instructor Notes: [Notes.md](Notes.md)
+  * Git and R (recommended for students and as a teaching resource): https://happygitwithr.com/
   * R Markdown: https://bookdown.org/yihui/rmarkdown/markdown-syntax.html
-  * Git and R (recommended): https://happygitwithr.com/
   * Git book: https://git-scm.com/book/en
   * Git branching: 
+    * https://happygitwithr.com/git-branches (and remotes https://happygitwithr.com/git-remotes)
     * https://nvie.com/posts/a-successful-git-branching-model/
     * https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
   * R Tutorial: https://www.cyclismo.org/tutorial/R/
   * R project introduction http://cran.r-project.org/doc/manuals/R-intro.html
   * R Language: https://www.r-project.org/
   * Test Driven Development (TDD) http://www.agiledata.org/essays/tdd.html
+
+### Advanced Materials
+
+  * Git internals: "Git for Ages 4 And Up" - https://youtu.be/1ffBJ4sVUb4
