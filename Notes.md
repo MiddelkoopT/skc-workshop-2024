@@ -208,9 +208,10 @@ git status
     * `git diff`
   * Stage files (index): `git add file.txt`
   * Double check that nothing has been added to the remote repository: `git fetch`
-  * Check the status: `git status`
+  * Check what changes will be committed: `git status`
   * Commit changes: `git commit` (write a good commit title and message!)
   * Push the changes to the remote repository: `git push`
+  * Check the status one last time: `git status`
   * Rest
 
 ### R Configuration
