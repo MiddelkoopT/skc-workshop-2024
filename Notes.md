@@ -82,11 +82,11 @@ git config --list
     * Write title `# RStudio Workshop` 
     * Write some text (your name)
     * Edit R Markdown Document Options: 
-      * Click "Settings" gear in file tab toolbar
+      * Click "Settings" gear in file tab toolbar (for each of the following)
         * Select "Preview in Viewer Pane"
         * Select  -> "Chunk Output in Console"
         * Select "Output Options"
-          * Click the "Advanced" tab and select "Keep markdown source file"
+          * Click the "Advanced" tab and select "Keep markdown source file", click "OK"
     * Save file
     * Knit (Knit to HTML)
       * Optionally set "Knit on Save" - (runs entire notebook)
