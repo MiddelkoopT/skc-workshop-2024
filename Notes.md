@@ -1,6 +1,8 @@
 # Show Notes
 
-## Setup Repository in Gitea
+## Setup and Navigate the Environment
+
+### Setup Remote Repository in Gitea
 
   * Navigate to Gitea:
     * https://gitea-i2-cere-cloud.nrp-nautilus.io/
@@ -12,25 +14,13 @@
   * Register New Account:
     * Username: Enter username (your_name), which is the same as the first part of your your_name@skc.edu email address.
     * Click on "Complete Account" (you may need to click on "Leave")
-  * Set a password (if not using a "Personal Access Token"):
+  * Set a password (if not using a "Personal Access Token" or "ssh keys"):
     * Click your avatar (colorful box in the top right) for a dropdown box
     * Click "Settings" in the dropdown box
     * Click on "Account" tab on the left (under "User Settings")
       * **DO NOT USE YOUR SKC PASSWORD HERE!**
       * Enter "New Password" and "Confirm New password"
       * Click "Update Password"
-  * Create a "Personal Access Token":
-    * Click your avatar (colorful box in the top right) for a dropdown box
-    * Click "Settings" in the dropdown box
-    * Click on "Applications" tab on the left (under "User Settings")
-    * In "Manage Access Tokens" (first box)
-      * In the text box under "Token Name" enter "SKC CI Workshop" (or another descriptive name if you wish)
-      * Click "Select Permissions" to open the permission settings
-      * In the "Repository" section click the "v" arrow and select "Read and Write" to enable access for this token.
-      * Click "Generate Token"
-      * Your token is in **BLUE** box at the top of the page and is a long string of digits and numbers.
-      * This is a password - it should be treated as such (use a password manager to store it)
-      * **DO NOT CLOSE THIS TAB** - you will need the token later
   * Create new git repository (in a new window):
     * Click the "+" in the upper right and select "+ New Repository"
     * Repository Name: skc-your_name
@@ -45,20 +35,23 @@
     * Select "HTTPS" (already selected)
     * Click on the copy button (⧉) to the right of the repository address next to the "HTTPS" box (to the left of the 3 dots).
   
-## Navigate R Studio and Setup Project
+### Navigate and Configure R Studio
 
   * Open RStudio
-  * Setup Git
+  * Setup Git (onetime)
     * This needs to be done only once when you first use the environment.
     * Click on the "Terminal"
       * Run (note the quotes and replace with your information) the following in the terminal:
 ```bash
 git config --global user.name "First Last"
 git config --global user.email "first_last@skc.edu"
-git config --global credential.helper store
+git config --global credential.helper cache
 git config --global core.editor nano
 git config --global --list
 ```
+
+### Setup New Project
+
   * Create a new "New Project" in `~/work` with "Git"
     * Note: Projects and data must be saved in `~/work` otherwise they will be lost.  
     * Select "Version Control" -> "Git"
@@ -66,7 +59,7 @@ git config --global --list
       * Project directory name: leave blank
       * Create project as a subdirectory of: ~/work (click "Browse" to change)
       * Click "Create Project"
-      * When prompted enter your user_name and use the newly created "personal access token" as the password.
+      * When prompted enter your user_name and password (or "personal access token").
   * Turn off saving `.RData` in project (not workspace)
     * It is not good to save data, especially in git.
     * "Tools" -> "Project Options" 
@@ -91,7 +84,7 @@ git config --global --list
       * Optionally set "Knit on Save" - (runs entire notebook)
     * Verify output
 
-## Save your work (with Git)
+### Save Your Work (with Git)
 
   * **Make sure all files are saved!**
     * Unsaved files will have a star at the end of the file name in the tab
@@ -130,19 +123,23 @@ git config --global --list
       * Click "Commit" under the *Git menu*
       * There should be no files in the "Staged" list on the left.
 
-## Visual Setup
+### Customize
 
   * Move Terminal and Console pane to the right
     * "View" -> Panes -> Console on Right
 
 ## Quit Environment
 
+To safely close and stop your environment:
+
   * Git Commit: (see above)
   * Shutdown RStudio: "File" -> "Quit Session"
   * Shutdown Jupyter: "File" -> "Hub Control Panel" -> "Stop My Server"
   * Close all Jupyter and RStudio windows
 
-## Start Environment after Setup
+## Start Environment
+
+To start the environment after setup:
 
   * Navigate to https://ci.skc.edu/ and click "Login to OSG Jupyter Notebook"
   * Start Jupyter: Select "Data Science with RStudio" and click "Start"
@@ -155,14 +152,6 @@ git config --global --list
     * Watch for errors
   * Verify Pull:
     * "Pull" again and it should say "Already up to date."
-    
-## Carpentry Workshop Lesson Notes
-
-  * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file (for example: `library(ratdat)`).
-    * Note: The file must be saved before the option to install is shown.
-    * Note: The R session may need to be restarted. Do this with
-      * "Session" -> "Restart R"
-  * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
 
 ## Technical Notes
 
@@ -178,12 +167,13 @@ When logging in to the environment for the fist time you must configure git.  Th
 ```bash
 git config --global user.name "First Last"
 git config --global user.email "first_last@skc.edu"
-git config --global credential.helper store
+git config --global credential.helper cache
 git config --global core.editor nano
 git config --global --list
 ```
 
-The `credential.helper` setting stores your "Personal Access Token" in your profile for all projects.  The "core.editor" sets the editor to "nano".  Please note, for nano in R Studio you must use "^S" to save, not "^O".
+  * The `credential.helper` setting caches your password for all projects.  
+  * The "core.editor" sets the editor to "nano".  Please note, for nano in R Studio you must use "^S" to save, not "^O".
 
 ### Git Status
 
@@ -213,7 +203,45 @@ git status
   * Check the status one last time: `git status`
   * Rest
 
-### R Configuration
+### R Packages
+
+  * For installing external libraries you can install them via RStudio after they have been referenced in a R Markdown file (for example: `library(ratdat)`).
+    * Note: The file must be saved before the option to install is shown.
+    * Note: The R session may need to be restarted. Do this with
+      * "Session" -> "Restart R"
+  * Do not include `install.packages()` in your R Markdown files (other than `Setup.Rmd) as the R Markdown file is run every time it is displayed with "Knit" and will re-install the packages every time.
+
+If you want to save the R packages between sessions, see the "R Package Configuration" section below.
+
+## Advanced Technical Notes
+
+### Gitea Personal Access Token
+
+A "Personal Access Token" is used to authenticate to the remote repository and is often preferred or required (GitHub).
+
+To use a personal access token in Gitea:
+
+  * Click your avatar (colorful box in the top right) for a dropdown box
+  * Click "Settings" in the dropdown box
+  * Click on "Applications" tab on the left (under "User Settings")
+  * In "Manage Access Tokens" (first box)
+    * In the text box under "Token Name" enter "SKC CI Workshop" (or another descriptive name if you wish)
+    * Click "Select Permissions" to open the permission settings
+    * In the "Repository" section click the "v" arrow and select "Read and Write" to enable access for this token.
+    * Click "Generate Token"
+    * Your token is in **BLUE** box at the top of the page and is a long string of digits and numbers.
+    * This is a password - it should be treated as such (use a password manager to store it)
+    * **DO NOT CLOSE THIS TAB** - you will need the token later
+
+You should either save your personal access token in a password manager (preferred) or configure Git to store the token.  **NOTE:** Git stores the personal access token in plain tex.  Another method to authenticate is to use "ssh keys".
+
+To enable storing the personal access token on disk in plain text for all repositories:
+
+```bash
+git config --global credential.helper store
+```
+
+### R Package Configuration
 
 R packages must be installed every time the environment is started, to do this a `setup.R` script or a R Markdown document must be run with the following:
 
