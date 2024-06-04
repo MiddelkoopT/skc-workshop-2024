@@ -12,15 +12,27 @@
   * Register New Account:
     * Username: Enter username (your_name), which is the same as the first part of your your_name@skc.edu email address.
     * Click on "Complete Account" (you may need to click on "Leave")
-  * Set a password:
+  * Set a password (if not using a "Personal Access Token"):
     * Click your avatar (colorful box in the top right) for a dropdown box
     * Click "Settings" in the dropdown box
-    * Click on "Account" tab on the left
+    * Click on "Account" tab on the left (under "User Settings")
       * **DO NOT USE YOUR SKC PASSWORD HERE!**
       * Enter "New Password" and "Confirm New password"
       * Click "Update Password"
-  * Create new repo:
-    * Click the"+" in the upper right and select "+ New Repository"
+  * Create a "Personal Access Token":
+    * Click your avatar (colorful box in the top right) for a dropdown box
+    * Click "Settings" in the dropdown box
+    * Click on "Applications" tab on the left (under "User Settings")
+    * In "Manage Access Tokens" (first box)
+      * In the text box under "Token Name" enter "SKC CI Workshop" (or another descriptive name if you wish)
+      * Click "Select Permissions" to open the permission settings
+      * In the "Repository" section click the "v" arrow and select "Read and Write" to enable access for this token.
+      * Click "Generate Token"
+      * Your token is in **BLUE** box at the top of the page and is a long string of digits and numbers.
+      * This is a password - it should be treated as such (use a password manager to store it)
+      * **DO NOT CLOSE THIS TAB** - you will need the token later
+  * Create new git repository (in a new window):
+    * Click the "+" in the upper right and select "+ New Repository"
     * Repository Name: skc-your_name
     * Make repository private (Visibility): check the checkbox
     * Initialize Repository: check the checkbox
@@ -52,15 +64,15 @@
       * Set "Always save history" to "No"
       * Click "Ok"
   * Setup Git
-    * This needs to be done only once when you create a "new project".
+    * This needs to be done only once when you first use the environment.
     * Click on the "Terminal"
-      * Verify that you are in your project folder `~/work/...`
       * Run (note the quotes and replace with your information) the following in the terminal:
 ```bash
-git config credential.helper store
-git config user.name "First Last"
-git config user.email "first_last@skc.edu"
-git config --local --list
+git config --global user.name "First Last"
+git config --global user.email "first_last@skc.edu"
+git config --global credential.helper store
+git config --global core.editor nano
+git config --global --list
 ```
   * Create a new "R Markdown" file
     * "File" -> "New File" -> "R Markdown" -> Click "Create Empty Document" (bottom left button).
@@ -160,31 +172,17 @@ git config --local --list
 
 ### Git Configuration
 
-For password based projects, configure username, email address, and enable password saving for your new project. Run in terminal once after the project has been created. Note the use of double quotes.
-
-```bash
-git config credential.helper cache
-git config user.name "First Last"
-git config user.email "first_last@skc.edu"
-git config --local --list
-```
-
-For personal access token projects, configure a persistent git configuration.  Use this code in a `setup.sh` bash script or bash notebook that you must run once after logging in and launching a new environment.
-```bash
-#!/bin/bash
-ln -sfv ~/work/.gitconfig ~/
-ln -sfv ~/work/.git-credentials ~/
-
-git config --global credential.helper store
-git config --global --list
-```
-
-You can also setup your `user.name` and `user.email` for every project (that is what `--global` does). This only needs to be once.  Replace the name and email  with your information and note the use of double quotes.  
+When logging in to the environment for the fist time you must configure git.  This only needs to be done once.  Replace the name and email with your information and note the use of double quotes.  
 
 ```bash
 git config --global user.name "First Last"
 git config --global user.email "first_last@skc.edu"
+git config --global credential.helper store
+git config --global core.editor nano
+git config --global --list
 ```
+
+The `credential.helper` setting stores your "Personal Access Token" in your profile for all projects.  The "core.editor" sets the editor to "nano".  Please note, for nano in R Studio you must use "^S" to save, not "^O".
 
 ### Git Status
 
