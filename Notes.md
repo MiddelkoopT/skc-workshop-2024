@@ -24,7 +24,7 @@
   * Create new git repository (in a new window):
     * Click the "+" in the upper right and select "+ New Repository"
     * Repository Name: skc-your_name
-    * Make repository private (Visibility): check the checkbox
+    * Verify the repository is public (Visibility): checkbox is unchecked (**NOTE:** your project is public!)
     * Initialize Repository: check the checkbox
     * Click "Create Repository"
   * Navigate to your repo:
@@ -48,6 +48,7 @@ git config --global user.email "first_last@skc.edu"
 git config --global credential.helper cache
 git config --global core.editor nano
 git config --global --list
+git config --list
 ```
 
 ### Setup New Project
@@ -122,11 +123,6 @@ git config --global --list
     * Verify commit:
       * Click "Commit" under the *Git menu*
       * There should be no files in the "Staged" list on the left.
-
-### Customize
-
-  * Move Terminal and Console pane to the right
-    * "View" -> Panes -> Console on Right
 
 ## Quit Environment
 
@@ -231,14 +227,15 @@ To use a personal access token in Gitea:
     * Click "Generate Token"
     * Your token is in **BLUE** box at the top of the page and is a long string of digits and numbers.
     * This is a password - it should be treated as such (use a password manager to store it)
-    * **DO NOT CLOSE THIS TAB** - you will need the token later
+    * **DO NOT CLOSE THIS TAB** - you will need the token later.
 
 You should either save your personal access token in a password manager (preferred) or configure Git to store the token.  **NOTE:** Git stores the personal access token in plain tex.  Another method to authenticate is to use "ssh keys".
 
-To enable storing the personal access token on disk in plain text for all repositories:
+To enable storing the personal access token on disk in plain text for a repository:
 
 ```bash
-git config --global credential.helper store
+git config credential.helper store
+git config --list
 ```
 
 ### R Package Configuration
