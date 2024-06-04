@@ -35,12 +35,16 @@
     * Select "HTTPS" (already selected)
     * Click on the copy button (⧉) to the right of the repository address next to the "HTTPS" box (to the left of the 3 dots).
   
-### Navigate and Configure R Studio
+### Setup R Studio
 
   * Open RStudio
+    * Navigate to https://ci.skc.edu/
+    * Click "Login to OSG Jupyter Notebook"
+    * Select "Data Science with RStudio"
+    * Click "RStudio" (you may need to click the blue "+" button)
   * Setup Git (onetime)
     * This needs to be done only once when you first use the environment.
-    * Click on the "Terminal"
+    * Click on the "Terminal" tab
       * Run (note the quotes and replace with your information) the following in the terminal:
 ```bash
 git config --global user.name "First Last"
@@ -51,7 +55,7 @@ git config --global --list
 git config --list
 ```
 
-### Setup New Project
+### Setup New RStudio Project
 
   * Create a new "New Project" in `~/work` with "Git"
     * Note: Projects and data must be saved in `~/work` otherwise they will be lost.  
@@ -63,7 +67,7 @@ git config --list
       * When prompted enter your user_name and password (or "personal access token").
   * Turn off saving `.RData` in project (not workspace)
     * It is not good to save data, especially in git.
-    * "Tools" -> "Project Options" 
+    * "Tools" -> "**Project Options**" 
     * Under "Workspace" 
       * Set "Restore .RData into workspace at startup" to "No"
       * Set "Save workspace to .RData on exit" to "No"
@@ -77,9 +81,12 @@ git config --list
   * Write, Configure, and View RMarkdown
     * Write title `# RStudio Workshop` 
     * Write some text (your name)
-    * Configure rendering
-      * "Settings (gear in file tab toolbar)" -> "Preview in Viewer Pane"
-      * "Settings (gear in file tab toolbar)" -> "Chunk Output in Console"
+    * Edit R Markdown Document Options: 
+      * Click "Settings" gear in file tab toolbar
+        * Select "Preview in Viewer Pane"
+        * Select  -> "Chunk Output in Console"
+        * Select "Output Options"
+          * Click the "Advanced" tab and select "Keep markdown source file"
     * Save file
     * Knit (Knit to HTML)
       * Optionally set "Knit on Save" - (runs entire notebook)
