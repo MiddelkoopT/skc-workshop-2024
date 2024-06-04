@@ -48,21 +48,6 @@
 ## Navigate R Studio and Setup Project
 
   * Open RStudio
-  * Create a new "New Project" in `~/work` with "Git"
-    * Note: Projects and data must be saved in `~/work` otherwise they will be lost.  
-    * Select "Version Control" -> "Git"
-      * Repository URL: your "https" repository value (see instructions above)
-      * Project directory name: leave blank
-      * Create project as a subdirectory of: ~/work (click "Browse" to change)
-      * Click "Create Project"
-  * Turn off saving `.RData` in project (not workspace)
-    * It is not good to save data, especially in git.
-    * "Tools" -> "Project Options" 
-    * Under "Workspace" 
-      * Set "Restore .RData into workspace at startup" to "No"
-      * Set "Save workspace to .RData on exit" to "No"
-      * Set "Always save history" to "No"
-      * Click "Ok"
   * Setup Git
     * This needs to be done only once when you first use the environment.
     * Click on the "Terminal"
@@ -74,6 +59,22 @@ git config --global credential.helper store
 git config --global core.editor nano
 git config --global --list
 ```
+  * Create a new "New Project" in `~/work` with "Git"
+    * Note: Projects and data must be saved in `~/work` otherwise they will be lost.  
+    * Select "Version Control" -> "Git"
+      * Repository URL: your "https" repository value (see instructions above)
+      * Project directory name: leave blank
+      * Create project as a subdirectory of: ~/work (click "Browse" to change)
+      * Click "Create Project"
+      * When prompted enter your user_name and use the newly created "personal access token" as the password.
+  * Turn off saving `.RData` in project (not workspace)
+    * It is not good to save data, especially in git.
+    * "Tools" -> "Project Options" 
+    * Under "Workspace" 
+      * Set "Restore .RData into workspace at startup" to "No"
+      * Set "Save workspace to .RData on exit" to "No"
+      * Set "Always save history" to "No"
+      * Click "Ok"
   * Create a new "R Markdown" file
     * "File" -> "New File" -> "R Markdown" -> Click "Create Empty Document" (bottom left button).
     * Save file ("R-Ecology"): 
