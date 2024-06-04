@@ -13,7 +13,7 @@
     * Username: Enter username (your_name), which is the same as the first part of your your_name@skc.edu email address.
     * Click on "Complete Account" (you may need to click on "Leave")
   * Set a password:
-    * Click your avitar (colorful box in the top right) for a dropdown box
+    * Click your avatar (colorful box in the top right) for a dropdown box
     * Click "Settings" in the dropdown box
     * Click on "Account" tab on the left
       * **DO NOT USE YOUR SKC PASSWORD HERE!**
@@ -22,7 +22,7 @@
   * Create new repo:
     * Click the"+" in the upper right and select "+ New Repository"
     * Repository Name: skc-your_name
-    * Make repository private (Visiblity): check the checkbox
+    * Make repository private (Visibility): check the checkbox
     * Initialize Repository: check the checkbox
     * Click "Create Repository"
   * Navigate to your repo:
@@ -49,7 +49,7 @@
     * Under "Workspace" 
       * Set "Restore .RData into workspace at startup" to "No"
       * Set "Save workspace to .RData on exit" to "No"
-      * Set "Always save histroy" to "No"
+      * Set "Always save history" to "No"
       * Click "Ok"
   * Setup Git
     * This needs to be done only once when you create a "new project".
@@ -111,7 +111,7 @@ git config --local --list
       * Enter the username and password for the Git repo (not your account)
       * Make sure there is not an error
     * Verify push
-      * Click "Push" again and make sure it says "Everyting up-to-date"
+      * Click "Push" again and make sure it says "Everything up-to-date"
       * Close git window
     * Verify commit:
       * Click "Commit" under the *Git menu*
@@ -122,14 +122,14 @@ git config --local --list
   * Move Terminal and Console pane to the right
     * "View" -> Panes -> Console on Right
 
-## Quit Envrionment
+## Quit Environment
 
   * Git Commit: (see above)
   * Shutdown RStudio: "File" -> "Quit Session"
   * Shutdown Jupyter: "File" -> "Hub Control Panel" -> "Stop My Server"
   * Close all Jupyter and RStudio windows
 
-## Start Envrionment after Setup
+## Start Environment after Setup
 
   * Navigate to https://ci.skc.edu/ and click "Login to OSG Jupyter Notebook"
   * Start Jupyter: Select "Data Science with RStudio" and click "Start"
@@ -193,6 +193,25 @@ Check the status of your project with the remote repository.  In a terminal run:
 git fetch
 git status
 ```
+
+### Git Workflow
+
+  * Fetch any changes from the remote repository (Gitea): `git fetch`
+  * Check the status of your repository: `git status`
+  * If there are changes from the remote repository:
+    * See what changed: `git log origin` and `git diff origin` (more detail)
+    * Merge the changes: `git merge`
+  * Do work and edit your files
+  * Find a logical spot to stop and commit (save)
+  * See what changed:
+    * `git status`
+    * `git diff`
+  * Stage files (index): `git add file.txt`
+  * Double check that nothing has been added to the remote repository: `git fetch`
+  * Check the status: `git status`
+  * Commit changes: `git commit` (write a good commit title and message!)
+  * Push the changes to the remote repository: `git push`
+  * Rest
 
 ### R Configuration
 
