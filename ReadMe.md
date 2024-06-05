@@ -2,6 +2,8 @@
 
 *"Getting started with Cyberinfrastructure"*
 
+https://gitea.skc.edu/workshops
+
 ## Lessons
 
 Lessons (Day 1):
