@@ -13,6 +13,7 @@ Lessons (Day 1):
     * https://datacarpentry.org/R-ecology-lesson-alternative/visualizing-ggplot.html
     * https://datacarpentry.org/R-ecology-lesson-alternative/how-r-thinks-about-data.html
     * https://datacarpentry.org/R-ecology-lesson-alternative/working-with-data.html
+      * Data link: https://www.michaelc-m.com/Rewrite-R-ecology-lesson/data/cleaned/surveys_complete_77_89.csv
 
 Lessons (Day 2):
 
@@ -29,9 +30,15 @@ Lessons (Day 2):
     * https://swcarpentry.github.io/git-novice/11-licensing.html
   * Technical overview of the infrastructure.
 
+Workshop Links:
+
+  * CI environment (SKC-CARE): https://ci.skc.edu/
+  * Gitea environment: https://gitea.skc.edu
+  * Workshop site: https://gitea.skc.edu/workshops/2024-June-CI-Workshop
+  * Workshop collaboration: https://gitea.skc.edu/2024-June-CI-Workshop
+
 ## Resources
 
-  * Login to the environment (SKC-CARE): https://ci.skc.edu/
   * Instructor Notes: [Notes.md](Notes.md)
   * Git and R (recommended for students and as a teaching resource): https://happygitwithr.com/
     * Introduction: https://dx.doi.org/10.7287%2Fpeerj.preprints.3159v2
