@@ -194,6 +194,12 @@ git status
 
 ### Git Workflow
 
+The Git dataflow goes from your brain, to the editor, click save to disk, add to git staging/index, commit to local repository, push to remote repository, the world sees it.
+
+The Git workflow is to pull from remote repository, merge new commits, work on things, check the changes, stage and commit, and push to remote repository.
+
+Git workflow details:
+
   * Fetch any changes from the remote repository (Gitea): `git fetch`
   * Check the status of your repository: `git status`
   * If there are changes from the remote repository:
