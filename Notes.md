@@ -163,6 +163,12 @@ To start the environment after setup:
   * cmd-r/ctrl-r - Run a line and move to the next
   * option-r/alt-r - Run a single line and stay on that line
 
+### R Configuration
+
+To display R Markdown files in Gitea, save the intermediate markdown file (`.md`), do the following:
+
+  * Go to the settings for the R Markdown file (the gear on the file toolbar) and selecting "Output Options" -> "Advanced" -> and select "Keep markdown source file".
+
 ### Git Configuration
 
 When logging in to the environment for the fist time you must configure git.  This only needs to be done once.  Replace the name and email with your information and note the use of double quotes.  
@@ -238,16 +244,18 @@ To use a personal access token in Gitea:
 
 You should either save your personal access token in a password manager (preferred) or configure Git to store the token.  **NOTE:** Git stores the personal access token in plain tex.  Another method to authenticate is to use "ssh keys".
 
-To enable storing the personal access token on disk in plain text for a repository:
+To enable storing the personal access token on disk in plain text for a local repository:
 
 ```bash
 git config credential.helper store
 git config --list
 ```
 
-### R Package Configuration
+### R Packages
 
-R packages must be installed every time the environment is started, to do this a `setup.R` script or a R Markdown document must be run with the following:
+R packages must be installed every time the environment is started. 
+
+This can be done in a R script (`setup.R`) or a R Markdown document that must be run every time.  For example:
 
 ```r
 options(repos = list(CRAN="http://cran.rstudio.com/"))
@@ -255,15 +263,11 @@ install.packages(c("tidyverse", "lubridate", "ratdat"))
 install.packages("ggplot2")
 ```
 
-R packages can be saved in a persistent `~/work` directory so they do not need to be reinstalled every time the environment is restarted.
+R packages can also be saved in a persistent `~/work` directory so they do not need to be reinstalled every time the environment is restarted.  To do this:
 
   * Create a `~/work/R` folder (run `mkdir ~/work/R` in a terminal)
   * Create a `.Renviron` file in the project directory with the content below
 ```bash
 R_LIBS_SITE=~/work/R
 ```
-  * Remember to "Open Project" for the project when starting a new environment.
-
-To display R Markdown files in Gitea, save the intermediate markdown file (`.md`), do the following:
-
-  * Go to the settings for the R Markdown file (the gear on the file toolbar) and selecting "Output Options" -> "Advanced" -> and select "Keep markdown source file".
+  * **NOTE:** Remember to "Open Project" for the project when starting a new environment.
