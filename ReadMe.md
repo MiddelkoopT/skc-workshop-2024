@@ -37,11 +37,11 @@ Workshop Links:
   * CI environment (SKC-CARE): https://ci.skc.edu/
   * Gitea environment: https://gitea.skc.edu
   * Workshop site: https://gitea.skc.edu/workshops/2024-June-CI-Workshop
-  * Workshop collaboration: https://gitea.skc.edu/2024-June-CI-Workshop
+  * Workshop Gitea organization: https://gitea.skc.edu/2024-June-CI-Workshop
+  * Instructor Notes: [Notes.md](Notes.md)
 
 ## Resources
 
-  * Instructor Notes: [Notes.md](Notes.md)
   * Git and R (recommended for students and as a teaching resource): https://happygitwithr.com/
     * Introduction: https://dx.doi.org/10.7287%2Fpeerj.preprints.3159v2
   * R Markdown: https://bookdown.org/yihui/rmarkdown/markdown-syntax.html
