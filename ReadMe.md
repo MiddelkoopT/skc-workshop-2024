@@ -45,12 +45,13 @@ Workshop Links:
   * Git and R (recommended for students and as a teaching resource): https://happygitwithr.com/
     * Introduction: https://dx.doi.org/10.7287%2Fpeerj.preprints.3159v2
   * R Markdown: https://bookdown.org/yihui/rmarkdown/markdown-syntax.html
+  * R Tutorial: https://www.cyclismo.org/tutorial/R/
   * Git book: https://git-scm.com/book/en
   * Git branching:
     * https://happygitwithr.com/git-branches (and remotes https://happygitwithr.com/git-remotes)
     * https://nvie.com/posts/a-successful-git-branching-model/
     * https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
-  * R Tutorial: https://www.cyclismo.org/tutorial/R/
+  * Software Carpentry "Working with R" workshop: https://swcarpentry.github.io/r-novice-inflammation
   * R project introduction http://cran.r-project.org/doc/manuals/R-intro.html
   * R Language: https://www.r-project.org/
 
