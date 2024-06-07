@@ -10,12 +10,15 @@ Lessons (Day 1):
 
   * Welcome and overview
   * Introduction to Jupyter Notebooks, RStudio, and Git
-  * RStudio (Data Analysis and Visualization in R for Ecologists)
-    * https://datacarpentry.org/R-ecology-lesson-alternative/introduction-r-rstudio.html
-    * https://datacarpentry.org/R-ecology-lesson-alternative/visualizing-ggplot.html
-    * https://datacarpentry.org/R-ecology-lesson-alternative/how-r-thinks-about-data.html
-    * https://datacarpentry.org/R-ecology-lesson-alternative/working-with-data.html
-      * Data link: https://www.michaelc-m.com/Rewrite-R-ecology-lesson/data/cleaned/surveys_complete_77_89.csv
+  * R for Reproducible Scientific Analysis
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/01-rstudio-intro.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/04-data-structures-part1.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/05-data-structures-part2.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/06-data-subsetting.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/08-plot-ggplot2.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/09-vectorization.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/11-writing-data.html
+    * https://swcarpentry.github.io/r-novice-gapminder/instructor/15-wrap-up.html
 
 Lessons (Day 2):
 
@@ -51,7 +54,6 @@ Workshop Links:
     * https://happygitwithr.com/git-branches (and remotes https://happygitwithr.com/git-remotes)
     * https://nvie.com/posts/a-successful-git-branching-model/
     * https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
-  * Software Carpentry "Working with R" workshop: https://swcarpentry.github.io/r-novice-inflammation
   * R project introduction http://cran.r-project.org/doc/manuals/R-intro.html
   * R Language: https://www.r-project.org/
 

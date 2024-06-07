@@ -5,7 +5,7 @@
 ### Setup Remote Repository in Gitea
 
   * Navigate to Gitea:
-    * https://gitea-i2-cere-cloud.nrp-nautilus.io/
+    * https://gitea.skc.edu/
     * This is a teaching environment and will be destroyed.
   * Sign in:
     * Click on Sign In
