@@ -14,6 +14,7 @@ Lessons (Day 1):
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/01-rstudio-intro.html
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/04-data-structures-part1.html
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/05-data-structures-part2.html
+      * Data: https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/main/episodes/data/gapminder_data.csv
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/06-data-subsetting.html
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/08-plot-ggplot2.html
     * https://swcarpentry.github.io/r-novice-gapminder/instructor/09-vectorization.html
