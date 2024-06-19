@@ -39,7 +39,7 @@ Lessons (Day 2):
 Workshop Links:
 
   * CI environment (SKC-CARE): https://ci.skc.edu/
-  * Gitea environment: https://gitea.skc.edu
+  * Git environment: https://gitea.skc.edu
   * Workshop site: https://gitea.skc.edu/workshops/2024-June-CI-Workshop
   * Workshop Gitea organization: https://gitea.skc.edu/2024-June-CI-Workshop
   * Instructor Notes: [Notes.md](Notes.md)

@@ -23,7 +23,7 @@
       * Click "Update Password"
   * Create new git repository (in a new window):
     * Click the "+" in the upper right and select "+ New Repository"
-    * Repository Name: skc-your_name
+    * Repository Name: workshop-your_name
     * Verify the repository is public (Visibility): checkbox is unchecked (**NOTE:** your project is public!)
     * Initialize Repository: check the checkbox
     * Click "Create Repository"
