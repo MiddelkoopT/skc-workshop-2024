@@ -51,6 +51,8 @@ Workshop Links:
     * Introduction: https://dx.doi.org/10.7287%2Fpeerj.preprints.3159v2
   * R Markdown: https://bookdown.org/yihui/rmarkdown/markdown-syntax.html
   * R Tutorial: https://www.cyclismo.org/tutorial/R/
+  * ggplot2: https://ggplot2.tidyverse.org/
+  * ggplot2 cheat-sheet: https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf
   * Git book: https://git-scm.com/book/en
   * Git branching:
     * https://happygitwithr.com/git-branches (and remotes https://happygitwithr.com/git-remotes)
